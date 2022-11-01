@@ -34,7 +34,7 @@ function makeBoard() {
 
 function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
-  const board = document.getElementById("board");
+  const htmlBoard = document.getElementById("board");
 
   // TODO: add comment for this code
   const topRow = document.createElement("tr");  //Create a variable = to a new element for the table(tr) on the document
@@ -46,7 +46,7 @@ function makeHtmlBoard() {
     topCell.setAttribute("id", x);  //Create an id for x-axis value for the new(td) to the new variable called "topCell"
     topRow.append(topCell);  //Add the new "topCell" variable to your tr variable "topRow"
   }
-  board.append(topRow);   //Add the new tr variable "topRow" to your board
+  htmlBoard.append(topRow);   //Add the new tr variable "topRow" to your board
 
   // TODO: add comment for this code
   for (let y = 0; y < HEIGHT; y++) {  //create a FOR loop for the y-axis
@@ -57,7 +57,7 @@ function makeHtmlBoard() {
       cell.setAttribute("id", `row-${y+1}-col-${x+1}`); //Create an id for y-axis -(minus) x-axis value for the new(td) to the new variable called "cell"
       row.append(cell);  //Add the new "cell" variable to your tr variable "row"
     }
-    board.append(row);  //Add the new tr variable "row" to your htmlBoard
+    htmlBoard.append(row);  //Add the new tr variable "row" to your htmlBoard
   }
 }
 
